@@ -1,10 +1,12 @@
+BUILD_DIR := build
+
 all: build
 
 build:
-	mkdir -p $1
+	mkdir -p $(BUILD_DIR)
 	pdflatex \
-		-output-directory $1 \
-	src/diploma.tex
+		-output-directory $(BUILD_DIR) \
+		src/diploma.tex
 
 install:
 	apt update
@@ -14,3 +16,6 @@ install:
 		texlive-latex-extra \
 		texlive-fonts-extra \
 		dvipng
+
+clean:
+	rm -rf $(BUILD_DIR)
