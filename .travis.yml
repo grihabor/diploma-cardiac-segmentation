@@ -1,8 +1,8 @@
 install: 
-  - ./install.sh
+  - make install
 
 script:
-  - ./build.sh ./build
+  - make build
 
 deploy:
   provider: releases
