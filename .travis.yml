@@ -1,3 +1,4 @@
+
 install: 
   - sudo make install
 
@@ -8,6 +9,7 @@ before_deploy:
   - git config --local user.name "Borodin Gregory"
   - git config --local user.email "grihabor@gmail.com"
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+
 deploy:
   provider: releases
   api_key: "${RELEASES_TOKEN}"

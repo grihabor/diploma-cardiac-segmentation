@@ -13,9 +13,9 @@ install:
 	apt install -y \
 		texlive-latex-recommended \
 		texlive-fonts-recommended \
+		texlive-lang-cyrillic \
 		texlive-latex-extra \
-		texlive-fonts-extra \
-		dvipng
+		texlive-fonts-extra
 
 clean:
 	rm -rf $(BUILD_DIR)
