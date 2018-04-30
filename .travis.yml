@@ -1,6 +1,3 @@
-before_install:
-  - apt update
-
 install: 
   - ./install.sh
 
