@@ -1,0 +1,16 @@
+before_install:
+  - apt update
+
+install: 
+  - ./install.sh
+
+script:
+  - ./build.sh ./build
+
+deploy:
+  provider: releases
+  api_key: "${RELEASES_TOKEN}"
+  file: "build/diploma.pdf"
+  skip_cleanup: true
+  on: 
+    branch: master
