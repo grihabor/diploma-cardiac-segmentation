@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+\def\selectlanguageifdefined#1{
+\expandafter\ifx\csname date#1\endcsname\relax
+\else\language\csname l@#1\endcsname\fi}
+\ifx\undefined\url\def\url#1{{\small #1}}\else\fi
+\ifx\undefined\BibUrl\def\BibUrl#1{\\ {\ttfamily\url{#1}}}\else\fi
+\ifx\undefined\BibAnnote\long\def\BibAnnote#1{}\else\fi
+\ifx\undefined\BibEmph\def\BibEmph#1{\emph{#1}}\else\fi
+
+\bibitem{dumic20173d}
+\selectlanguageifdefined{english}
+3d video subjective quality: a new database and grade comparison study~/
+  Emil~Dumi{\'c}, Sonja~Grgi{\'c}, Kre{\v{s}}imir~{\v{S}}aki{\'c} et~al.~//
+  \BibEmph{Multimedia tools and applications}. "---
+\newblock 2017. "---
+\newblock Vol.~76, no.~2. "---
+\newblock Pp.~2087--2109.
+
+\bibitem{voronov2013methodology}
+\selectlanguageifdefined{english}
+Methodology for stereoscopic motion-picture quality assessment~/
+  Alexander~Voronov, Dmitriy~Vatolin, Denis~Sumin et~al.~// Proc. SPIE. "---
+\newblock Vol.~8648. "---
+\newblock 2013. "---
+\newblock P.~864810.
+
+\bibitem{khaustova2015objective}
+\selectlanguageifdefined{english}
+An objective method for 3{D} quality prediction using visual annoyance and
+  acceptability level~/ Darya~Khaustova, J{\'e}r{\^o}me~Fournier,
+  Emmanuel~Wyckens, Olivier~Le~Meur~// SPIE/IS\&T Electronic Imaging~/
+  International Society for Optics and Photonics. "---
+\newblock 2015. "---
+\newblock P.~93910P.
+
+\bibitem{terzic2017causes}
+\selectlanguageifdefined{english}
+\BibEmph{Terzic~Kasim, Hansard~Miles}. Causes of discomfort in stereoscopic
+  content: a review~// \BibEmph{arXiv preprint arXiv:1703.04574}. "---
+\newblock 2017.
+
+\bibitem{vqmt3d}
+\selectlanguageifdefined{english}
+{Video Quality Measurement Tool 3D Project}. "---
+\newblock \url{http://compression.ru/video/vqmt3d/}.
+
+\bibitem{lambooij2009visual}
+\selectlanguageifdefined{english}
+Visual discomfort and visual fatigue of stereoscopic displays: A review~/
+  Marc~Lambooij, Marten~Fortuin, Ingrid~Heynderickx, Wijnand~IJsselsteijn~//
+  \BibEmph{Journal of Imaging Science and Technology}. "---
+\newblock 2009. "---
+\newblock Vol.~53, no.~3. "---
+\newblock Pp.~30201--1.
+
+\bibitem{9report}
+\selectlanguageifdefined{english}
+\BibEmph{Vatolin~Dmitry, Bokov~Alexander, Dolganov~Stanislav et~al.}
+  {V}{Q}{M}{T}3{D} project stereo-film-quality analysis report 9. "---
+\newblock \url{http://www.compression.ru/video/vqmt3d/report9/}. "---
+\newblock 2017.
+
+\bibitem{zeri2015visual}
+\selectlanguageifdefined{english}
+\BibEmph{Zeri~Fabrizio, Livi~Stefano}. Visual discomfort while watching
+  stereoscopic three-dimensional movies at the cinema~// \BibEmph{Ophthalmic
+  and Physiological Optics}. "---
+\newblock 2015. "---
+\newblock Vol.~35, no.~3. "---
+\newblock Pp.~271--282.
+
+\bibitem{aant}
+\selectlanguageifdefined{english}
+\BibEmph{Анциферова~А.В., Ватолин~Д.С.}
+  Автоматический метод оценки степени
+  усталости от просмотра 3d-видео~// VIII
+  Международная научно-практическая
+  конференция "Запись и воспроизведение
+  объёмных изображений в кинематографе и
+  других отраслях"~/ ВГИК. "---
+\newblock 2016. "---
+\newblock Pp.~106--122.
+
+\bibitem{rozhkova}
+\selectlanguageifdefined{english}
+\BibEmph{Рожкова~Г.И.} Теоретическая оценка
+  дефектности стереокадров и реальный
+  зрительный дискомфорт~// VIII Международная
+  научно-практическая конференция "Запись и
+  воспроизведение объёмных изображений в
+  кинематографе и других отраслях"~/ ВГИК. "---
+\newblock 2016. "---
+\newblock Pp.~85--98.
+
+\end{thebibliography}

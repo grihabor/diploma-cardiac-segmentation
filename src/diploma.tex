@@ -1,0 +1,106 @@
+\documentclass[14pt, a4paper]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage[left=2cm,right=2cm,bottom=3cm,top=2cm]{geometry}
+\usepackage{multirow}
+
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+
+\linespread{1.25}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+\ \vspace{-3cm}
+
+\includegraphics[width=0.5\textwidth]{img/msu.eps}\\
+{Московский государственный университет имени М.В.~Ломоносова}\\
+Факультет вычислительной математики и кибернетики\\
+Кафедра интеллектуальных информационных технологий
+
+\vspace{5cm}
+
+{\Large Анциферова~Анастасия~Всеволодовна}
+
+\vspace{1cm}
+
+{\Large\bfseries
+Прогнозирование степени дискомфорта зрителей при просмотре стереоскопического фильма по его техническому качеству\\}
+
+\vspace{1cm}
+
+{\large МАГИСТЕРСКАЯ ДИССЕРТАЦИЯ}
+\end{center}
+
+\vfill
+
+\begin{flushright}
+  \textbf{Научный руководитель:}\\
+  к.ф.-м.н., старший научный сотрудник\\
+  Д.С.~Ватолин
+\end{flushright}
+
+\vfill
+
+\begin{center}
+Москва, 2018
+\end{center}
+
+\enlargethispage{4\baselineskip}
+
+%\newpage
+%\noindent 
+%\textbf{Прогнозирование степени дискомфорта зрителей при просмотре стереоскопического фильма по его техническому качеству}\\
+%Анциферова Анастасия\\
+%В настоящее время большое количество фильмов производится в стереоскопическом формате. Несмотря на развитие технологии стереосъёмки, даже в высокобюджетных фильмах встречаются искажения, которые вызывают головную боль и дискомфорт у зрителей во время просмотра. Существующие методы автоматического контроля качества стереофильмов способны обнаружить такие искажения, однако оценка дискомфорта, вызванного отдельными искажениями, будучи сложной задачей, вызывает трудности. Данная работа посвящена исследованию влияния геометрических, цветовых и временных несоответствий между ракурсами стереофильма на уровень дискомфорта зрителя. В серии экспериментов было проведено анкетирование 302 человек по результатам просмотра фрагментов художественных стереофильмов с искусственно добавленными дозированными искажениями. Анкета состояла из вопросов о степени визуального дискомфорта, причиняемого каждым из продемонстрированных фрагментов, а также о поле и возрасте участника. Анализ полученных данных выявил зависимость между интенсивностью движения в сцене и степенью дискомфорта, причиняемой фрагментами с временным несоответствием.
+
+%\noindent 
+%\\[1mm]
+%\textbf{Forecasting of viewers' discomfort degree when watching stereoscopic movie by its technical quality}\\
+%Antsiferova Anastasiia\\
+%Nowadays a large number of movies are produced in stereoscopic format. Despite stereo technology improvement, stereoscopic artifacts that cause headache and discomfort in viewers can still be found even in high-budget films. Existing automatic quality control algorithms are able to detect such distortions, however, they do not take into account a viewer's subjective perception of different artifacts. In this research the influence of geometric, color and temporal discrepancies in the stereo pair on a viewer's discomfort is explored. A series of experiments with passive stereo cinema technology was conducted. 60 video sequences from stereoscopic movies with artificially added distortions were demonstrated to the audience. 302 subjects took part in the experiments. During the analysis of the obtained data, the dependencies between the degree of spectators' discomfort and the intensity of distortions were revealed.
+
+\clearpage
+\newpage
+
+\renewcommand{\contentsname}{Содержание}
+\tableofcontents
+\clearpage
+\newpage
+
+\input{tex/introduction}
+\clearpage
+\newpage
+\input{tex/problem}
+\clearpage
+\newpage
+\input{tex/related_work}
+\clearpage
+\newpage
+\input{tex/proposed_method}
+\clearpage
+\newpage
+\input{tex/implementation}
+\clearpage
+\newpage
+\input{tex/conclusion}
+\clearpage
+\newpage
+
+\renewcommand{\bibname}{Список литературы}
+\addcontentsline{toc}{section}{\bibname}
+
+\bibliographystyle{gost71s}
+\bibliography{references}{}
+
+\end{document} 
