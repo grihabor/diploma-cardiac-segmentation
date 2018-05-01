@@ -1,12 +1,13 @@
-BUILD_DIR := build
+BUILD_DIR := $(shell pwd)/build
 
 all: build
 
 build:
 	mkdir -p $(BUILD_DIR)
-	pdflatex \
+	cd src; pdflatex \
+		-interaction=nonstopmode \
 		-output-directory $(BUILD_DIR) \
-		src/diploma.tex
+		diploma.tex
 
 install:
 	apt update
@@ -19,3 +20,5 @@ install:
 
 clean:
 	rm -rf $(BUILD_DIR)
+
+.PHONY: build install clean
