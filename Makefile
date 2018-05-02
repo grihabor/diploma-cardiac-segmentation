@@ -1,13 +1,19 @@
 BUILD_DIR := $(shell pwd)/build
+FLAGS     := -interaction=nonstopmode
+LATEX     := latex $(FLAGS)
+
 
 all: build
 
-build:
+build: clean
 	mkdir -p $(BUILD_DIR)
-	cd src; pdflatex \
-		-interaction=nonstopmode \
-		-output-directory $(BUILD_DIR) \
-		diploma.tex
+	cp -r src/* build
+	cd build; \
+		$(LATEX) diploma.tex; \
+		bibtex diploma; \
+		$(LATEX) diploma.tex; \
+		$(LATEX) diploma.tex; \
+		dvipdfm diploma.dvi
 
 install:
 	apt update
