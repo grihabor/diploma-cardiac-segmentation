@@ -19,6 +19,6 @@ install:
 		texlive-fonts-extra
 
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -vrf $(BUILD_DIR)
 
 .PHONY: build install clean
