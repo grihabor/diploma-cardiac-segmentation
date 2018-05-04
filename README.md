@@ -5,7 +5,7 @@ Diploma source files
 ## Install
 
 ```bash
-make install
+sudo make install
 ```
 
 ## Build 
