@@ -8,6 +8,6 @@ RUN echo "Europe/Moscow" > /etc/timezone \
  && dpkg-reconfigure tzdata
 
 WORKDIR /project
-ADD . .
+ADD Makefile Makefile
 
 RUN make install
