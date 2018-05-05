@@ -27,4 +27,7 @@ install:
 clean:
 	rm -vrf $(BUILD_DIR)
 
+tag:
+	@echo "$(shell date +'%Y-%m-%d_%H•%M•%S')_$(shell git log --format=%h -1)"
+
 .PHONY: build install clean
