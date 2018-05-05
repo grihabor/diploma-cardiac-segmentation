@@ -28,20 +28,20 @@
 
 Чтобы оценить качество сегментации, введем метрики оценки качества сегментации. Результат сегментации можно представить либо как область пикселей, либо как контур вокруг этой области. 
 
-Индекс Дайса (Dice index) и Индекс Джаккарда (Jaccard index) позволяют сравнить 2 области:
+Индекс Дайса~\ref{eq:dice_index} и индекс Джаккарда~\ref{eq:jaccard_index} позволяют сравнить 2 области:
 
-\[
+\begin{equation}\label{eq:dice_index}
   Dice(U,V) = \frac{2|U\cap{}V|}{|U| + |V|}
-\]
-\[
+\end{equation}
+\begin{equation}\label{eq:jaccard_index}
   J(U,V) = \frac{|U\cap{}V|}{|U\cup{}V|}
-\]
+\end{equation}
 
 Метрика Хаусдорфа (Hausdorff distance) позволяет оценить схожесть контуров:
 
-\[
+\begin{equation}
   d_{H}(A,B)=\max\left\{\sup_{a\in{}A}\inf_{b\in{}B}d(a,b),\sup_{b\in{}B}\inf_{a\in{}A}d(a,b)\right\}
-\]
+\end{equation}
 
 \clearpage
 Чтобы посчитать индекс Джаккарда или индекс Дайса, необходимо 
@@ -52,13 +52,13 @@
 соответствует контур $\hat{U}$, тогда результаты будут 
 вычисляться так: 
 
-\[
+\begin{equation}
   Result_{Dice} = Dice(Y, U)
-\]
-\[
+\end{equation}
+\begin{equation}
   Result_{Jaccard} = J(Y, U)
-\]
-\[
+\end{equation}
+\begin{equation}
   Result_{Hausdorff} = d_{H}(\hat{Y}, \hat{U})
-\] 
+\end{equation}
 
