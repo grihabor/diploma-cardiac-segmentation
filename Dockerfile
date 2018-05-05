@@ -7,4 +7,4 @@ RUN apt update \
 WORKDIR /project
 ADD . .
 
-RUN apt install
+RUN make install
