@@ -28,7 +28,7 @@
 
 Чтобы оценить качество сегментации, введем метрики оценки качества сегментации. Результат сегментации можно представить либо как область пикселей, либо как контур вокруг этой области. 
 
-Индекс Дайса~\ref{eq:dice_index} и индекс Джаккарда~\ref{eq:jaccard_index} позволяют сравнить 2 области:
+Индекс Дайса~\eqref{eq:dice_index} и индекс Джаккарда~\eqref{eq:jaccard_index} позволяют сравнить 2 области:
 
 \begin{equation}\label{eq:dice_index}
   Dice(U,V) = \frac{2|U\cap{}V|}{|U| + |V|}
@@ -37,9 +37,9 @@
   J(U,V) = \frac{|U\cap{}V|}{|U\cup{}V|}
 \end{equation}
 
-Метрика Хаусдорфа (Hausdorff distance) позволяет оценить схожесть контуров:
+Метрика Хаусдорфа~\eqref{eq:hausdorff_distance} позволяет оценить схожесть контуров:
 
-\begin{equation}
+\begin{equation}\label{eq:hausdorff_distance}
   d_{H}(A,B)=\max\left\{\sup_{a\in{}A}\inf_{b\in{}B}d(a,b),\sup_{b\in{}B}\inf_{a\in{}A}d(a,b)\right\}
 \end{equation}
 
@@ -50,15 +50,15 @@
 вероятностей в контур. Пусть на входе алгоритму подается 
 матрица $X$, на выходе алгоритм выдает матрицу $U$, которой
 соответствует контур $\hat{U}$, тогда результаты будут 
-вычисляться так: 
+вычисляться по формулам \eqref{eq:result_dice}, \eqref{eq:result_jaccard}, \eqref{eq:result_hausdorff}.
 
-\begin{equation}
+\begin{equation}\label{eq:result_dice}
   Result_{Dice} = Dice(Y, U)
 \end{equation}
-\begin{equation}
+\begin{equation}\label{eq:result_jaccard}
   Result_{Jaccard} = J(Y, U)
 \end{equation}
-\begin{equation}
+\begin{equation}\label{eq:result_hausdorff}
   Result_{Hausdorff} = d_{H}(\hat{Y}, \hat{U})
 \end{equation}
 
