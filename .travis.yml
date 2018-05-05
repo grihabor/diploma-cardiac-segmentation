@@ -1,6 +1,4 @@
-
-install: 
-  - sudo make install
+image: grihabor/latex:latest
 
 script:
   - make build
