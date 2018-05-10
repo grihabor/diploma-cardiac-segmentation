@@ -2,6 +2,9 @@ BUILD_DIR := $(shell pwd)/build
 FLAGS     := -interaction=nonstopmode
 LATEX     := latex $(FLAGS)
 
+BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
+DATE       = $(shell date +'%Y-%m-%d_%H•%M•%S')
+COMMIT     = $(shell git log --format=%h -1)
 
 all: build
 
@@ -28,6 +31,6 @@ clean:
 	rm -vrf $(BUILD_DIR)
 
 tag:
-	@echo "$(shell date +'%Y-%m-%d_%H•%M•%S')_$(shell git log --format=%h -1)"
+	@echo "$(DATE)_$(BRANCH)_$(COMMIT)"
 
 .PHONY: build install clean
