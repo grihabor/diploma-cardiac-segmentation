@@ -158,6 +158,14 @@ Y(X)\ = \frac{
   \caption{Иллюстрация разрастания контекста при последовательном увеличении параметра растяжения слоев.}
 \end{figure}
 
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+Так, например, свертка с ядром \kernel{$s$},$s=3$ и растяжением $k=2$ 
+\mbox{($m=\ceil{\frac{s+2(k-1)}{k}}=\ceil{\frac{5}{2}}=3$)} по~сути является 
+сверткой~\kernel{5}, в которой используется только 9 входов~\eqref{eq:dilated_example}. 
+Использование растянутых сверточных слоев показывает хорошие результаты~\cite{segm_dcnn_crf},~\cite{deeplab}.
+
 \begin{equation}
 \label{eq:dilated_example}
 y = \sum_{
@@ -165,17 +173,8 @@ y = \sum_{
     i=0 \\
     j=0
   }
-}^{m}x_{s\times{}i,s\times{}j}
+}^{m}x_{k\times{}i,k\times{}j}
 \end{equation}
-
-\newcommand{\kernel}[1]{$#1\times{}#1$}
-
-\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
-\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-
-Так, например, свертка с ядром \kernel{s},$s=3$ и растяжением $k=2$ 
-\mbox{($m=\ceil{\frac{s+2(k-1)}{k}}=\ceil{\frac{5}{2}}=3$)} по~сути является 
-сверткой~\kernel{5}, в которой используется только 9 входов~\eqref{eq:dilated_example}. Использование растянутых сверточных слоев показывает хорошие результаты~\cite{segm_dcnn_crf},~\cite{deeplab}.
 
 \iffalse
 \subsection{DeepLab}
