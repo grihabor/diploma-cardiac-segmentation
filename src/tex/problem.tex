@@ -12,14 +12,6 @@
   \item данные для тестирования
 \end{itemize}
 
-\begin{figure}[hb]
-  \begin{center}
-    \includegraphics[width=0.3\textwidth,keepratio]{img/example-in}
-    \includegraphics[width=0.3\textwidth,keepratio]{img/example-out}
-  \end{center}
-  \caption{Пример данных для обучения}
-\end{figure}
-
 Данные для обучения и валидации — это пары~$(\hat{X}_{train},\hat{Y}_{train})$ 
 и~$(\hat{X}_{val},\hat{Y}_{val})$, 
 где~$\hat{X}_{train} = \{\hat{x}_{train}^{i}\}, i\in{}\overline{1,n_{train}}$ 
@@ -74,6 +66,14 @@ X = \frac{
 каждый элемент которого — матрица~$R^{n\times{}n}$. Каждый элемент последней, 
 в~свою очередь, является числом~$1$~или~$0$, в зависимости от того, принадлежит~ли 
 соответствующий пиксель заданному \mbox{$m$-угольнику} или~нет.
+
+\begin{figure}[hb]
+  \begin{center}
+    \includegraphics[width=0.3\textwidth,keepratio]{img/example-in}
+    \includegraphics[width=0.3\textwidth,keepratio]{img/example-out}
+  \end{center}
+  \caption{Пример данных для обучения}
+\end{figure}
 
 Таким образом, исходная задача сводится к задаче бинарной классификации каждого пикселя 
 входного изображения — либо пиксель принадлежит объекту, либо~нет. На~вход алгоритму 
