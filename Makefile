@@ -9,7 +9,7 @@ all: build
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 	cp -r src/* $(BUILD_DIR)
-	mv $(BUILD_DIR)/Makefile.build $(BUILD_DIR)/Makefile
+	mv Makefile.build $(BUILD_DIR)/Makefile
 
 .PHONY: build
 build: clean $(BUILD_DIR)
