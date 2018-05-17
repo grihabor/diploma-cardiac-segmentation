@@ -23,7 +23,8 @@ install:
 		texlive-fonts-recommended \
 		texlive-lang-cyrillic \
 		texlive-latex-extra \
-		texlive-fonts-extra
+		texlive-fonts-extra \
+		latexmk
 		
 .PHONY: clean
 clean:
