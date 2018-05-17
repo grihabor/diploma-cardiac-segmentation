@@ -1,0 +1,20 @@
+DIPLOMA_PDF   := diploma.pdf
+FLAGS         := -pdf \
+                 -pdflatex="pdflatex -interaction=nonstopmode" \
+                 -use-make
+                 
+.PHONY: all
+all: $(DIPLOMA_PDF)
+
+%.tex: %.raw
+	./raw2tex $< > $@
+
+%.tex: %.dat
+	./dat2tex $< > $@
+
+$(DIPLOMA_PDF): diploma.tex
+	latexmk $(FLAGS) diploma.tex
+
+clean:
+	latexmk -CA
+        

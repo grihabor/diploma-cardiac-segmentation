@@ -1,6 +1,4 @@
 BUILD_DIR := $(shell pwd)/build
-FLAGS     := -interaction=nonstopmode
-LATEX     := latex $(FLAGS)
 
 BRANCH     = $(shell git rev-parse --abbrev-ref HEAD)
 DATE       = $(shell date +'%Y-%m-%d_%H•%M•%S')
@@ -8,16 +6,16 @@ COMMIT     = $(shell git log --format=%h -1)
 
 all: build
 
-build: clean
+$(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
-	cp -r src/* build
-	cd build; \
-		$(LATEX) diploma.tex; \
-		bibtex diploma; \
-		$(LATEX) diploma.tex; \
-		$(LATEX) diploma.tex; \
-		dvipdfm diploma.dvi
+	cp -r src/* $(BUILD_DIR)
+	mv $(BUILD_DIR)/Makefile.build $(BUILD_DIR)/Makefile
 
+.PHONY: build
+build: clean $(BUILD_DIR)
+	cd $(BUILD_DIR); make diploma.pdf
+
+.PHONY: install
 install:
 	apt update
 	apt install -y \
@@ -26,11 +24,12 @@ install:
 		texlive-lang-cyrillic \
 		texlive-latex-extra \
 		texlive-fonts-extra
-
+		
+.PHONY: clean
 clean:
-	rm -vrf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR)
 
+.PHONY: tag
 tag:
 	@echo "$(DATE)_$(BRANCH)_$(COMMIT)"
 
-.PHONY: build install clean
