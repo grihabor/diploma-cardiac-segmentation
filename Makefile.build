@@ -1,6 +1,5 @@
 DIPLOMA_PDF   := diploma.pdf
-FLAGS         := -pdfps \
-                 -latex="latex -interaction=nonstopmode" \
+FLAGS         := -latex="latex -interaction=nonstopmode" \
                  -bibtex
                  
 .PHONY: all
