@@ -1,7 +1,8 @@
 DIPLOMA_PDF   := diploma.pdf
 FLAGS         := -pdf \
                  -pdflatex="latex -interaction=nonstopmode" \
-                 -use-make
+                 -use-make \
+                 -bibtex
                  
 .PHONY: all
 all: $(DIPLOMA_PDF)
