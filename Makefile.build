@@ -1,5 +1,5 @@
 DIPLOMA_PDF   := diploma.pdf
-FLAGS         := -pdf \
+FLAGS         := -pdfps \
                  -pdflatex="latex -interaction=nonstopmode" \
                  -use-make \
                  -bibtex
